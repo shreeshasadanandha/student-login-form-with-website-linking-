@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        /* Import Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #89f7fe, #66a6ff);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        fieldset {
+            border: none;
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            width: 320px;
+            transition: transform 0.3s ease;
+        }
+
+        fieldset:hover {
+            transform: translateY(-5px);
+        }
+
+        legend h2 {
+            margin: 0;
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            transition: border 0.3s;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            border-color: #66a6ff;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            width: 48%;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            background-color: #66a6ff;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #4d8ed1;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        p {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+        }
+
+        a {
+            color: #66a6ff;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <fieldset>
+        <legend><h2>Log In</h2></legend>
+
+        <form action="studentform.html" method="get">
+
+            <label for="username">User name:</label>
+            <input type="text" id="username" name="username">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+
+            <input type="checkbox" id="showPassword" name="showPassword" disabled>
+            <label for="showPassword">Show password</label>
+
+            <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+                <input type="submit" value="Log In">
+                <input type="reset" value="Cancel">
+            </div>
+
+            <p>Forgot password? <a href="#">Click Here</a></p>
+
+        </form>
+    </fieldset>
+
+</body>
+</html>

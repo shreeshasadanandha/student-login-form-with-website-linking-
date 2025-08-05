@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Details</title>
+  <style>
+ 
+  
+  /* Add some padding to the form to make it look better with background */
+  form {
+    background-color: rgba(255, 255, 255, 0.8); /* Slight white background with opacity */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+   
+  <form action="website.html" method="get">
+    <fieldset>
+      <legend><h2>STUDENT DETAILS</h2></legend>
+
+      <fieldset>
+        <legend><h2>Personal</h2></legend>
+        <table>
+          <tr>
+            <td><label>First Name:</label></td>
+            <td><input type="text" name="first_name" /></td>
+            <td><label>Last Name:</label></td>
+            <td><input type="text" name="last_name" /></td>
+          </tr>
+          <tr>
+            <td><label>Father:</label></td>
+            <td><input type="text" name="father" /></td>
+            <td><label>Mother:</label></td>
+            <td><input type="text" name="mother" /></td>
+          </tr>
+          <tr>
+            <td><label>DOB:</label></td>
+            <td><input type="date" name="dob" /></td>
+            <td><label>Gender:</label></td>
+            <td>
+              <input type="radio" name="gender" value="male" id="male" />
+              <label for="male">Male</label>
+              <input type="radio" name="gender" value="female" id="female" />
+              <label for="female">Female</label>
+              <input type="radio" name="gender" value="other" id="other" />
+              <label for="other">Other</label>
+            </td>
+          </tr>
+          <tr>
+            <td><label>Blood Group:</label></td>
+            <td>
+              <select name="blood_group">
+                <option value="">--Select--</option>
+                <option value="A+">A+</option>
+                <option value="A-">A−</option>
+                <option value="B+">B+</option>
+                <option value="B-">B−</option>
+                <option value="O+">O+</option>
+                <option value="O-">O−</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB−</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+
+      <br />
+
+      <fieldset>
+        <legend><h2>Contact</h2></legend>
+        <table>
+          <tr>
+            <td><label>Mobile:</label></td>
+            <td><input type="tel" name="mobile" pattern="\d{10}" maxlength="10" title="Enter a 10-digit phone number"  /></td>
+
+            <td><label>Email:</label></td>
+            <td><input type="email" name="email" /></td>
+          </tr>
+          <tr>
+            <td><label>Address Line 1:</label></td>
+            <td colspan="3"><input type="text" name="address1" /></td>
+          </tr>
+          <tr>
+            <td><label>Address Line 2:</label></td>
+            <td colspan="3"><input type="text" name="address2" /></td>
+          </tr>
+          <tr>
+            <td><label>Country:</label></td>
+            <td>
+              <select name="country">
+                <option value="">--Select Country--</option>
+                <option value="India">India</option>
+                <option value="United States">United States</option>
+              </select>
+            </td>
+            <td><label>State:</label></td>
+            <td>
+              <select name="state">
+                <option value="">--Select State--</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Maharashtra">Maharashtra</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label>Pin Code:</label></td>
+            <td><input type="text" name="pincode" pattern="\d{6}" maxlength="6" inputmode="numeric" title="Enter a 6-digit PIN code" /></td>
+          </tr>
+        </table>
+      </fieldset>
+
+      <fieldset>
+        <legend><h2>Education</h2></legend>
+        <table>
+          <tr>
+            <td><label>Highest Degree:</label></td>
+            <td>
+              <select name="highest_degree">
+                <option value="">--Select Degree--</option>
+                <option value="High School">High School</option>
+                <option value="Diploma">Diploma</option>
+                <option value="Bachelor's">Bachelor's</option>
+                <option value="Master's">Master's</option>
+                <option value="PhD">PhD</option>
+                <option value="Other">Other</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label>Stream:</label></td>
+            <td colspan="3">
+              <input type="radio" name="stream" value="Science" id="science">
+              <label for="science">Science</label>
+              <input type="radio" name="stream" value="Commerce" id="commerce">
+              <label for="commerce">Commerce</label>
+              <input type="radio" name="stream" value="Arts" id="arts">
+              <label for="arts">Arts</label>
+              <input type="radio" name="stream" value="Other" id="other_stream">
+              <label for="other_stream">Other</label>
+            </td>
+          </tr>
+          <tr>
+            <td><label>If others:</label></td>
+            <td colspan="3"><input type="text" name="other_degree" /></td>
+          </tr>
+          <tr>
+            <td><label>YOP:</label></td>
+            <td colspan="3">
+              <select name="yop">
+                <option value="">--Select Year--</option>
+                <option value="2025">2025</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+                <option value="2020">2020</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><label>University:</label></td>
+            <td><input type="text" name="university" /></td>
+            <td><label>Percentage:</label></td>
+            <td><input type="number" name="percentage" /></td>
+          </tr>
+        </table>
+      </fieldset>
+
+      <fieldset>
+        <legend><h2>PLACEMENT</h2></legend>
+        <table>
+          <tr>
+            <td><label>Skills:</label></td>
+            <td>
+              <input type="radio" name="skills" value="Python" id="python">
+              <label for="python">Python</label>
+              <input type="radio" name="skills" value="Java" id="java">
+              <label for="java">Java</label>
+              <input type="radio" name="skills" value="JavaScript" id="javascript">
+              <label for="javascript">JavaScript</label>
+              <input type="radio" name="skills" value="C++" id="cpp">
+              <label for="cpp">C++</label>
+              <input type="radio" name="skills" value="HTML/CSS" id="html_css">
+              <label for="html_css">HTML/CSS</label>
+              <input type="radio" name="skills" value="Others" id="others_skills">
+              <label for="others_skills">Others</label>
+            </td>
+          </tr>
+          <tr>
+            <td><label>Expected Salary:</label></td>
+            <td>
+              <input type="radio" name="expected_salary" value="3 Lakh" id="salary_3lakh">
+              <label for="salary_3lakh">3 Lakh</label>
+              <input type="radio" name="expected_salary" value="4 Lakh" id="salary_4lakh">
+              <label for="salary_4lakh">4 Lakh</label>
+              <input type="radio" name="expected_salary" value="6 Lakh" id="salary_6lakh">
+              <label for="salary_6lakh">6 Lakh</label>
+              <input type="radio" name="expected_salary" value="7 Lakh" id="salary_7lakh">
+              <label for="salary_7lakh">7 Lakh</label>
+              <input type="radio" name="expected_salary" value="No Expectation" id="salary_no_expectation">
+              <label for="salary_no_expectation">No Expectation</label>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+
+      <fieldset>
+        <legend><h2>CREATE ACCOUNT</h2></legend>
+        <table>
+          <tr>
+            <td><label>User name:</label></td>
+            <td><input type="text" name="username" /></td>
+          </tr>
+          <tr>
+            <td><label>Password:</label></td>
+            <td><input type="password" name="password" /></td>
+          </tr>
+          <tr>
+            <td><label>Re-enter:</label></td>
+            <td><input type="password" name="repassword" /></td>
+          </tr>
+        </table>
+      </fieldset>
+
+      <fieldset>
+        <legend><h2>AGREE</h2></legend>
+        <input type="radio" name="agree" value="yes" id="agree_yes">
+        <label for="agree_yes">I agree</label>
+        <input type="radio" name="agree" value="no" id="agree_no">
+        <label for="agree_no">I do not agree</label>
+      </fieldset>
+
+      <br />
+      
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
+
+    </fieldset>
+  </form>
+
+</body>
+</html>
